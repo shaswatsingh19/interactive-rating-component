@@ -1,0 +1,140 @@
+:root{
+    --orange: hsl(25, 97%, 53%);
+    --white: hsl(0, 0%, 100%);
+    --light-grey: hsl(217, 12%, 63%);
+    --medium-grey: hsl(216, 12%, 54%);
+    --dark-blue: hsl(213, 19%, 14%);
+    --very-dark-blue: hsl(216, 12%, 8%);
+}
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--very-dark-blue);
+    font-family: 'Overpass', sans-serif;
+
+}
+
+#container{
+    
+    width: 20rem;
+    max-width: 90%;
+    margin: 9.5rem auto;
+    border-radius: 20px;
+    padding:1.3rem;
+    background-color: var(--dark-blue);
+    
+}
+
+#svg-star{
+    z-index: -22;
+    display: inline-block;
+    background-color: hsl(213, 19%, 25%);
+    border-radius: 20px;
+    padding: 10px 10px 5px 10px;
+}
+#svg-thank{
+    margin: 20px auto;
+}
+h1{
+    color:var(--white);
+    margin: 15px 0;
+}
+p{
+    font-size: .85rem;
+    color: var(--light-grey);
+}
+
+.list{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    /* border: 1px solid red; */
+    justify-content: space-around;
+}
+.list-item{
+    list-style-type: none;
+    margin: 20px auto;
+    /* border: 1px solid red; */
+    border-radius: 50%;
+    padding:7px 14px ;
+    cursor: pointer;
+    transition: all .5s;
+}
+.list-item-normal{
+    color: var(--medium-grey);
+    background-color: hsl(213, 19%, 25%);
+
+}
+.list-item:hover{
+    background-color:var(--medium-grey);
+    color: var(--white);
+}
+.list-item-active{
+    background-color: var(--orange);
+    color:var(--white)
+
+}
+
+.submit{
+    text-decoration: none;
+    display: block;
+    border-radius: 20px;
+    text-align: center;
+    color: var(--white);
+    background-color: var(--orange);
+    padding: 10px 0;
+    transition: all .7s;
+
+}
+.submit:hover{
+    color: var(--orange);
+    background-color: var(--white);
+}
+
+.submit:active{
+    transform: scale(.97);
+}
+
+
+.thank-you-hidden{
+    display: none;
+}
+.thank-you-flex{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+#feedback-result{
+    color:var(--orange);
+    border-radius: 20px;
+    background-color: hsl(213, 19%, 22%);
+    padding: 6px 15px;
+    font-size: 14px;
+}
+
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    color: var(--medium-grey);
+    position: fixed;
+    bottom: 5px;
+    width: 100%;
+}
+.attribution a { color: hsl(228, 45%, 44%); }
+
+
+@media screen and (max-width:300px) {
+
+    
+    .list{
+        grid-template-columns: repeat(3,1fr);
+    }
+
+    
+}
